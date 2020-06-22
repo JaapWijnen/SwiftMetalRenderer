@@ -60,7 +60,7 @@ class Scene {
         // override this to update your scene
     }
 
-    #warning("no like dis")
+    #warning("This works for now, should be done differently")
     final func add(node: Node, parent: Node? = nil, render: Bool = true) {
         if let parent = parent {
             parent.add(childNode: node)
@@ -75,7 +75,7 @@ class Scene {
         addRenderableChildren(node: node, render: render)
     }
     
-    #warning("and dis")
+    #warning("same goes for this part and other node adding functions")
     private func addRenderableChildren(node: Node, render: Bool) {
         for child in node.children {
             if render == true, let renderable = child as? Renderable {
@@ -111,7 +111,7 @@ class Scene {
 extension Scene {
     func renderShadowPass(renderEncoder: MTLRenderCommandEncoder) {
         let sunlight = lights.first { light in light.type == sunLight }!
-        #warning("ja dit moet anders")
+        #warning("Hardcoded sun type light for now")
         let position: float3 = [sunlight.position.x,
                                 sunlight.position.y,
                                 sunlight.position.z]

@@ -67,7 +67,7 @@ class MeshModel: Model {
 
     let meshes: [Mesh]
     
-    #warning("weg?")
+    #warning("See if this can be removed")
     static var vertexDescriptor: MDLVertexDescriptor = MDLVertexDescriptor.defaultVertexDescriptor
 
     override init(name: String, instanceCount: Int = 1) {
@@ -90,7 +90,7 @@ class MeshModel: Model {
             mdlMesh.addTangentBasis(forTextureCoordinateAttributeNamed: MDLVertexAttributeTextureCoordinate,
                                     tangentAttributeNamed: MDLVertexAttributeTangent,
                                     bitangentAttributeNamed: MDLVertexAttributeBitangent)
-            #warning("remove")
+            #warning("Is this vertexDescriptor still necessary?")
             MeshModel.vertexDescriptor = mdlMesh.vertexDescriptor
             mtkMeshes.append(try! MTKMesh(mesh: mdlMesh, device: Engine.device))
         }

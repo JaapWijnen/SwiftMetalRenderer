@@ -225,7 +225,7 @@ fragment float4 compositionFrag(VertexOut in [[stage_in]],
     for(uint i = 0; i < fragmentUniforms.lightCount; i++){
         LightData light = lightsBuffer[i];
         
-        #warning not a sun then?
+        #warning Different shader needed for sun type light?
         float3 lightDirection = normalize(light.position - position);
         float3 H = normalize(viewDirection + lightDirection);
         

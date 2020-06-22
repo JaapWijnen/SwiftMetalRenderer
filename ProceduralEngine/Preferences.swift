@@ -5,7 +5,9 @@ class Preferences {
     public static var mainPixelFormat: MTLPixelFormat = .bgra8Unorm
     public static var mainDepthStencilPixelFormat: MTLPixelFormat = .depth32Float
     public static var gbufferPixelFormat: MTLPixelFormat = .rgba16Float
-    public static var startingScene: SceneType = .helmet
+    
+    #warning("Here you can choose which scene to display e.g. .helmet, .planet, .chest")
+    public static var startingScene: SceneType = .planet
     public static let constantBuffersInFlight = 3
 }
 

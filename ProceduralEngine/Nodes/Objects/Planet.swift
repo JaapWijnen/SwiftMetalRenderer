@@ -45,7 +45,7 @@ class TerrainFace: Model {
         texturesBuffer.label = "GBufferTextures"
         textureEncoder.setArgumentBuffer(texturesBuffer, offset: 0)
         
-        #warning("dafak dude")
+        #warning("look at this at a later stage (should be abstracted away)")
         let noTextures = false
         textureEncoder.setTexture(nil, index: Int(MaterialIndexAlbedo.rawValue))
         textureEncoder.constantData(at: Int(MaterialIndexHasAlbedo.rawValue)).storeBytes(of: noTextures, as: Bool.self)
